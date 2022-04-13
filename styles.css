@@ -1,0 +1,42 @@
+:root {
+  --brightOrange: hsl(31, 77%, 52%);
+  --darkCyan: hsl(184, 100%, 22%);
+  --veryDarkCyan: hsl(179, 100%, 13%);
+  --transparentWhite: hsla(0, 0%, 100%, 0.75);
+  --veryLightGray: hsl(0, 0%, 95%);
+}
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+  top: 0;
+}
+
+/*===MAIN CONTAINTER===*/
+
+.main-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+/*===CARD PROPERTIES===*/
+
+.card {
+  display: flex;
+  max-width: 920px;
+  height: 500px;
+}
+
+.column__sedan {
+  background-color: var(--brightOrange);
+}
+
+.column__suv {
+  background-color: var(--darkCyan);
+}
+
+.column__luxury {
+  background-color: var(--veryDarkCyan);
+}
