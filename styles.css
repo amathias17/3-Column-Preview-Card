@@ -6,10 +6,11 @@
   --veryLightGray: hsl(0, 0%, 95%);
 }
 
-body {
+* {
   box-sizing: border-box;
   margin: 0;
   top: 0;
+  font-size: 0.9375rem;
 }
 
 /*===MAIN CONTAINTER===*/
@@ -21,7 +22,7 @@ body {
   height: 100vh;
 }
 
-/*===CARD PROPERTIES===*/
+/*===CARD OUTER PROPERTIES===*/
 
 .card {
   display: flex;
@@ -29,8 +30,13 @@ body {
   height: 500px;
 }
 
+.column {
+  padding: 3rem;
+}
+
 .column__sedan {
   background-color: var(--brightOrange);
+  border-radius: 8px 0 0 8px;
 }
 
 .column__suv {
@@ -39,4 +45,63 @@ body {
 
 .column__luxury {
   background-color: var(--veryDarkCyan);
+  border-radius: 0 8px 8px 0;
+}
+
+/*===CARD INNER PROPERTIES===*/
+
+.card__icon {
+  margin-bottom: 2.1875rem;
+}
+.card__header {
+  font-family: "Big Shoulders Display", cursive;
+  font-weight: 700;
+  font-size: 2.5rem;
+  line-height: 3rem;
+  text-transform: uppercase;
+  color: var(--veryLightGray);
+  margin-bottom: 1.5625rem;
+}
+
+.card__description {
+  font-family: "Lexend Deca", sans-serif;
+  font-weight: 400;
+  line-height: 1.5625rem;
+  color: var(--transparentWhite);
+  max-width: 13.25rem;
+  padding-bottom: 5.1875rem;
+}
+
+/*===CARD BUTTONS===*/
+
+.card__button {
+  border: none;
+  width: 9.125rem;
+  height: 3rem;
+  border-radius: 25px;
+  font-family: "Lexend Deca";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.9375rem;
+  line-height: 1.5625rem;
+  background-color: var(--veryLightGray);
+}
+
+.column__sedan .card__button {
+  color: var(--brightOrange);
+}
+
+.column__suv .card__button {
+  color: var(--darkCyan);
+}
+
+.column__luxury .card__button {
+  color: var(--veryDarkCyan);
+}
+
+.card__button:hover {
+  cursor: pointer;
+  background-color: transparent;
+  border: solid 2px var(--veryLightGray);
+  color: var(--veryLightGray);
 }
