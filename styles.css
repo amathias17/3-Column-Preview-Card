@@ -26,12 +26,14 @@
 
 .card {
   display: flex;
+  flex-wrap: wrap;
   max-width: 920px;
   height: 500px;
 }
 
 .column {
   padding: 3rem;
+  flex: 33%;
 }
 
 .column__sedan {
@@ -104,4 +106,36 @@
   background-color: transparent;
   border: solid 2px var(--veryLightGray);
   color: var(--veryLightGray);
+}
+
+/*===ATTRIBUTION===*/
+
+/*===MEDIA QUERIES===*/
+
+@media screen and (max-width: 875px) {
+  .main-container {
+    height: 100%;
+    padding: 6.25rem 0;
+  }
+
+  .card {
+    max-width: 20.4375rem;
+    height: 82.875rem;
+  }
+  .column__sedan {
+    background-color: var(--brightOrange);
+    border-radius: 8px 8px 0 0;
+  }
+
+  .column__suv {
+    background-color: var(--darkCyan);
+  }
+
+  .column__luxury {
+    background-color: var(--veryDarkCyan);
+    border-radius: 0 0 8px 8px;
+  }
+  .card__description {
+    padding-bottom: 1.5625rem;
+  }
 }
